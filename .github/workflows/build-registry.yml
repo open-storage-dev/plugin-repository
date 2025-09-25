@@ -1,0 +1,72 @@
+name: Build Plugin Registry
+
+on:
+  push:
+    branches: [ main ]
+    paths: 
+      - 'plugins/**'
+      - 'src/**'
+      - 'package.json'
+      - 'tsconfig.json'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'plugins/**'
+      - 'src/**'
+      - 'package.json'
+      - 'tsconfig.json'
+
+# Allow manually triggering the workflow
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build plugin registry
+      run: npm run build
+
+    - name: Commit and push if changed (only on main branch)
+      if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add plugins/all.json
+        if ! git diff --staged --quiet; then
+          git commit -m "🤖 Update plugin registry"
+          git push
+        else
+          echo "No changes to plugin registry"
+        fi
+
+    - name: Setup Pages (only on main branch)
+      if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+      uses: actions/configure-pages@v4
+
+    - name: Upload to GitHub Pages (only on main branch)
+      if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: .
+
+    - name: Deploy to GitHub Pages (only on main branch)
+      if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+      id: deployment
+      uses: actions/deploy-pages@v4
