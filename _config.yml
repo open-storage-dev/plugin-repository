@@ -1,0 +1,21 @@
+# GitHub Pages configuration for OpenStorage Plugin Repository
+title: OpenStorage Plugin Repository
+description: The official plugin repository for the OpenStorage project
+url: https://open-storage-dev.github.io
+baseurl: /plugin-repository
+
+# Use minimal theme for clean documentation
+theme: minima
+
+# Include plugins directory in the site
+include:
+  - plugins
+
+# Enable markdown processing
+markdown: kramdown
+highlighter: rouge
+
+# GitHub Pages specific settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

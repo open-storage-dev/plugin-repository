@@ -1,0 +1,33 @@
+{
+  "name": "openstorage-plugin-repository",
+  "version": "1.0.0",
+  "description": "The official OpenStorage plugin repository",
+  "main": "bin/build.js",
+  "scripts": {
+    "build": "tsc && node bin/build.js",
+    "dev": "tsc --watch",
+    "clean": "rm -rf bin/*.js plugins/all.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/open-storage-dev/plugin-repository.git"
+  },
+  "keywords": [
+    "openstorage",
+    "plugins",
+    "repository"
+  ],
+  "author": "OpenStorage Team",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/open-storage-dev/plugin-repository/issues"
+  },
+  "homepage": "https://github.com/open-storage-dev/plugin-repository#readme",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

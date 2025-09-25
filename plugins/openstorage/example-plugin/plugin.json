@@ -1,0 +1,15 @@
+{
+  "name": "Example Storage Plugin",
+  "author": "openstorage",
+  "version": "1.0.0",
+  "description": "An example plugin demonstrating the OpenStorage plugin system",
+  "homepage": "https://github.com/open-storage-dev/example-plugin",
+  "repository": "https://github.com/open-storage-dev/example-plugin",
+  "license": "Apache-2.0",
+  "keywords": [
+    "storage",
+    "example",
+    "demo"
+  ],
+  "main": "index.js"
+}

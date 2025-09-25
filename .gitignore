@@ -137,3 +137,11 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# TypeScript build output (but keep bin/*.js files for GitHub Pages)
+src/**/*.js
+src/**/*.d.ts
+src/**/*.js.map
+
+# Keep the generated plugin registry - this is important for GitHub Pages
+!plugins/all.json
