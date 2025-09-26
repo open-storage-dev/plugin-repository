@@ -1,0 +1,12 @@
+
+{
+    "name": "ui",
+    "description": "UI plugin",
+    "author": {
+        "id": "open-storage",
+        "name": "OpenStorage",
+        "email": "info@openstorage.io",
+        "url": "https://openstorage.io"
+    },
+    "repository": "https://github.com/open-storage-dev/open-storage/plugins/ui"
+}
