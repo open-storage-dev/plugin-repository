@@ -45,3 +45,9 @@ Then, build the plugin repository:
 ```bash
 bun run build
 ```
+
+You can also watch for changes and rebuild the plugin repository automatically:
+
+```bash
+bun run watch
+```
