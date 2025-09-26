@@ -7,6 +7,8 @@
 
 The official OpenStorage plugin repository. Add your own plugin by submitting a PR!
 
+<br />
+
 ## How to add a plugin
 
 1. Fork this repository
@@ -31,6 +33,8 @@ The official OpenStorage plugin repository. Add your own plugin by submitting a 
     "repository": "https://github.com/john-doe/my-os-plugin"
 }
 ```
+
+<br />
 
 ## Building the plugin repository
 
