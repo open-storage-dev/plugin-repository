@@ -1,4 +1,10 @@
-# plugin-repository
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./builder/assets/OpenStorage-logo-white.svg">
+  <img alt="OpenStorage Logo" src="./builder/assets/OpenStorage-logo-black.svg" align="right" width="225">
+</picture>
+
+# OpenStorage Plugin Repository
+
 The official OpenStorage plugin repository. Add your own plugin by submitting a PR!
 
 ## How to add a plugin
