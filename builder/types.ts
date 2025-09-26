@@ -17,5 +17,6 @@ export const pluginSchema = z.object({
 
 export type InputPlugin = z.infer<typeof pluginSchema>;
 export type ExportedPlugin = InputPlugin & {
+    id: string;
     icon: string | null;
 };

@@ -53,7 +53,7 @@ export async function build() {
 
             exportedUserPlugins[`${plugin.author.id}/${plugin.name}`] = {
                 ...plugin,
-                name: `${username}/${pluginname}`,
+                id: pluginname,
                 author: {
                     ...plugin.author,
                     id: username,
