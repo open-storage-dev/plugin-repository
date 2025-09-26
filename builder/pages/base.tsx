@@ -28,12 +28,12 @@ export function BasePage({ children }: { children: React.ReactNode }) {
                         </div>
 
                         <nav>
-                            <ul className="flex items-center gap-4">
+                            <ul className="flex items-center gap-5">
                                 <li>
                                     <a href="/">All plugins</a>
                                 </li>
                                 <li>
-                                    <a href="https://github.com/open-storage/plugin-repository/issues/new">Submit a plugin</a>
+                                    <a href="https://github.com/open-storage/plugin-repository/pulls">Submit a plugin</a>
                                 </li>
                             </ul>
                         </nav>
